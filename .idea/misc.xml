@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.17239583333333333" />
+        <entry key="..\:/Classes/ED/FAKTOE_SHOP/app/src/main/res/drawable-v24/shop_onboard_signin_background.xml" value="0.2265" />
+        <entry key="..\:/Classes/ED/FAKTOE_SHOP/app/src/main/res/drawable-v24/shop_onboard_signup_background.xml" value="0.2265" />
+        <entry key="..\:/Classes/ED/FAKTOE_SHOP/app/src/main/res/layout/activity_main.xml" value="0.2006340579710145" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable-v24/shop_onboard_signin_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/shop_onboard_signup_background.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/background_filters.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/background_gray_rounded.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/bottom_nav_bar_background.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/checkbox_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/cursor.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/dashboard_home_top_view.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/dashboard_summary_view.xml" value="0.21598205566406253" />
+        <entry key="app/src/main/res/drawable/days_selected.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/days_unselected.xml" value="0.11701275634765644" />
+        <entry key="app/src/main/res/drawable/drop_down.xml" value="0.112" />
+        <entry key="app/src/main/res/drawable/edit_text_border.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/edit_text_border_grey.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/edit_text_error_border.xml" value="0.16690411376953126" />
+        <entry key="app/src/main/res/drawable/error_bar.xml" value="0.1365" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/icon_notification_alert.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/product_review_yellow.xml" value="0.48418426513671875" />
+        <entry key="app/src/main/res/drawable/rounded_button_blue.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/rounded_button_gray.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/shop_onboard_toggle.xml" value="0.2085" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24261932373046877" />
+        <entry key="app/src/main/res/layout/activity_shop_dashboard.xml" value="0.3287582397460939" />
+        <entry key="app/src/main/res/layout/activity_sign_in_sign_up.xml" value="0.22605172862177303" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fargment_dashboard_home_product_edit_dialog.xml" value="0.3309232480533927" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_home.xml" value="0.33664703369140625" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_home_product_layout.xml" value="0.5659255981445314" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_new_product.xml" value="0.40781357093899934" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_product_management.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_profile.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/fragment_sign_in_1_mobile_number.xml" value="0.38181818181818183" />
+        <entry key="app/src/main/res/layout/fragment_sign_in_2_otp.xml" value="0.2198960034836568" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_1.xml" value="0.3527710215829951" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_1_otp_dialog.xml" value="0.24409637451171876" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_2.xml" value="0.31082336425781254" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_3.xml" value="0.2660722665415298" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_4.xml" value="0.32201080322265624" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_5.xml" value="0.23264529463173692" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_6_waiting.xml" value="0.30082186943397593" />
+        <entry key="app/src/main/res/layout/spinner_layout.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/menu/bottom_nav_bar_menu.xml" value="0.2953125" />
+        <entry key="app/src/main/res/sign_in/drawable/ic_baseline_check_circle_24.xml" value="0.1365" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

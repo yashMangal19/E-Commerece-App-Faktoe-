@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Dashboard.ShopDashboard">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/criteria_cf_bold"
+        android:text="Faktoe"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ImageView_Profile"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="25dp"
+        android:background="#0fff"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_profile_user_uncrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="25dp"
+        android:background="#0fff"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_notification_new"
+        app:layout_constraintEnd_toStartOf="@id/ImageView_Profile"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/icon_notification_alert"
+        app:layout_constraintEnd_toStartOf="@id/ImageView_Profile"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/BottomNavBar"
+        android:layout_width="match_parent"
+        app:cnb_textAppearance="@style/BottomNavBar_Style_TextView"
+        app:cnb_unselectedColor="#cce5ff"
+        app:cnb_radius="30dp"
+        app:cnb_iconSize="42dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bottom_nav_bar_background"
+        app:cnb_menuResource="@menu/bottom_nav_bar_menu"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

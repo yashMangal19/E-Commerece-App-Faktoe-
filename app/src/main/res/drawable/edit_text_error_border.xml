@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--the outline box turns to red when the edit text is out of focus-->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+            <corners android:radius="10dp"/>
+            <stroke android:width="2dp" android:color="@color/red" />
+        </shape>
+    </item>
+
+</selector>

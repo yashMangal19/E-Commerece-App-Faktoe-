@@ -12,6 +12,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="checkboxStyle">@style/MyCheckBoxStyle</item>
+        <item name="android:checkboxStyle">@style/MyCheckBoxStyle</item>
+
     </style>
 
     <style name="Theme.FAKTOESHOP_material" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -26,6 +32,13 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="android:radioButtonStyle">@style/MyRadioButtonStyle</item>
+        <item name="checkboxStyle">@style/MyCheckBoxStyle</item>
+        <item name="android:checkboxStyle">@style/MyCheckBoxStyle</item>
+
+
     </style>
 
     <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
@@ -49,5 +62,14 @@
         <item name="android:fontFamily">@font/manjorant_regular</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="MyCheckBoxStyle" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@drawable/my_compound_button_color_selector</item>
+    </style>
+
+    <style name="MyRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@drawable/my_compound_button_color_selector</item>
+    </style>
+
 
 </resources>

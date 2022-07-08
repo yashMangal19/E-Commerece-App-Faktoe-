@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/CategoryFilter_RadioBtn"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="Category"
+    android:fontFamily="@font/manjorant_regular"
+    android:textSize="18sp"
+    android:layout_marginBottom="24dp"/>
+

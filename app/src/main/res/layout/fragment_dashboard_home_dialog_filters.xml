@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/TitleFilterDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Filter"
+        android:fontFamily="@font/majorant_bold"
+        android:textSize="32dp"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/FilterDialogCloseBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toTopOf="@id/TitleFilterDialog"
+        app:layout_constraintBottom_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icon_exit"/>
+
+    <View
+        android:id="@+id/FilterDialog_View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        android:background="@color/light_gray"/>
+
+    <LinearLayout
+        android:id="@+id/FilterDialogSelectFilterLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:paddingBottom="64dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/SelectSortFilter_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/sideBarSortFilter"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_right_blue"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort"
+                android:fontFamily="@font/majorant_medium"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SelectCategoryFilter_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/sideBarCategoryFilter"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_right_blue"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:fontFamily="@font/majorant_medium"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SelectRatingFilter_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/sideBarRatingFilter"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_right_blue"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:fontFamily="@font/majorant_medium"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SelectAvailabilityFilter_LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/sideBarAvailabilityFilter"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners_right_blue"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Availability"
+                android:fontFamily="@font/majorant_medium"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="@id/FilterDialog_View1"
+        app:layout_constraintBottom_toBottomOf="@id/FilterDialogSelectFilterLinearLayout"
+        app:layout_constraintStart_toEndOf="@id/FilterDialogSelectFilterLinearLayout"
+        android:background="@color/light_gray"/>
+
+    <LinearLayout
+        android:id="@+id/FilterDialogSortFilter_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintStart_toEndOf="@id/FilterDialogSelectFilterLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S O R T   B Y"
+            android:fontFamily="@font/majront_thin"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/SortFilter_Default_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            android:fontFamily="@font/manjorant_regular"
+            android:textSize="18sp"
+            android:textColor="@color/default_gray"
+            android:paddingStart="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton
+            android:id="@+id/SortFilter_Rating_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:fontFamily="@font/manjorant_regular"
+            android:textSize="18sp"
+            android:textColor="@color/gray"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+
+        <RadioButton
+            android:id="@+id/SortFilter_CostLowToHigh_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost: Low to High"
+            android:fontFamily="@font/manjorant_regular"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+
+        <RadioButton
+            android:id="@+id/SortFilter_CostHighToLow_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost: High to Low"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/manjorant_regular"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FilterDialogCategoryFilter_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintStart_toEndOf="@id/FilterDialogSelectFilterLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F I L T E R   B Y"
+            android:fontFamily="@font/majront_thin"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CategoryFilter_RecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FilterDialogRatingFilter_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintStart_toEndOf="@id/FilterDialogSelectFilterLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F I L T E R   B Y"
+            android:fontFamily="@font/majront_thin"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/RatingFilter_4.5_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating 4.5 +"
+            android:fontFamily="@font/manjorant_regular"
+            android:textColor="@color/default_gray"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton
+            android:id="@+id/RatingFilter_4.0_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating 4.0+"
+            android:fontFamily="@font/manjorant_regular"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+
+        <RadioButton
+            android:id="@+id/RatingFilter_3.5_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating 3.5 +"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/manjorant_regular"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+        <RadioButton
+            android:id="@+id/RatingFilter_0.0_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating 0+"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/manjorant_regular"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FilterDialogAvailabilityFilter_LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        android:paddingStart="16dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/TitleFilterDialog"
+        app:layout_constraintStart_toEndOf="@id/FilterDialogSelectFilterLinearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F I L T E R   B Y"
+            android:fontFamily="@font/majront_thin"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/AvailabilityFilter_InStock_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Stock"
+            android:fontFamily="@font/manjorant_regular"
+            android:textColor="@color/default_gray"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton
+            android:id="@+id/AvailabilityFilter_OutOfStock_RadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Of Stock"
+            android:fontFamily="@font/manjorant_regular"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:paddingStart="4dp"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/FilterDialogSelectFilterLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="24dp">
+
+        <Button
+            android:id="@+id/BtnApplyFilters"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Apply"
+            android:background="@drawable/rounded_button_blue"
+            android:textColor="@color/white"
+            android:fontFamily="@font/majorant_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAllCaps="false"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/BtnClearFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Filters"
+            android:fontFamily="@font/majorant_medium"
+            app:layout_constraintTop_toTopOf="@id/BtnApplyFilters"
+            app:layout_constraintBottom_toBottomOf="@id/BtnApplyFilters"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            android:textSize="16sp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

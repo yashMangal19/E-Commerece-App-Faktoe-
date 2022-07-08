@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dashboard_summary_view"
+    android:elevation="2dp"
+    android:layout_marginTop="16dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:id="@+id/OrderShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:text="Rukmani Enterprises"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/majorant_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/OrderDetailsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/OrderShopName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/PackedBtn"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="Packed"
+        android:background="@drawable/rounded_button_blue"
+        android:fontFamily="@font/manjorant_regular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/OrderDetailsRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/OrderManagementTotalCoast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total ₹745"
+        android:textSize="18sp"
+        android:fontFamily="@font/majorant_medium"
+        android:textColor="@color/black"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="@id/PackedBtn"
+        app:layout_constraintBottom_toBottomOf="@id/PackedBtn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

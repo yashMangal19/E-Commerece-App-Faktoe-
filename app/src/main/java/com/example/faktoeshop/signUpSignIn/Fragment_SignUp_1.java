@@ -32,6 +32,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.faktoeshop.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseException;
@@ -40,6 +41,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.concurrent.TimeUnit;
 
@@ -68,6 +71,8 @@ public class Fragment_SignUp_1 extends Fragment {
     FirebaseAuth mAuth;
 
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     // Initializing shopOnboardClass to store data in viewModel.
     ShopOnboardClass shopData;
@@ -211,31 +216,43 @@ public class Fragment_SignUp_1 extends Fragment {
                 if(!ETName.getText().toString().trim().isEmpty() && !ETPhoneNumber.getText().toString().trim().isEmpty() &&
                         !ETEmail.getText().toString().trim().isEmpty() && !ETBusinessName.getText().toString().trim().isEmpty()){
                     if(ETPhoneNumber.getText().toString().trim().length() == 10){
-                        if(isNumberVerified){
-                            //Updating data in ShopOnboardClass and then pushing it to ViewModel.
-                            shopData.setUserName(ETName.getText().toString());
-                            shopData.setPhoneNumber(ETPhoneNumber.getText().toString());
-                            shopData.setEmail(ETEmail.getText().toString());
-                            shopData.setShopName(ETBusinessName.getText().toString());
-                            viewModel.addShopData(shopData);
+                        db.collection("RegisteredShops")
+                                .whereEqualTo("phoneNo",ETPhoneNumber.getText().toString().trim())
+                                .get()
+                                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                    @Override
+                                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                        if(queryDocumentSnapshots.isEmpty()){
+                                            if(isNumberVerified){
+                                                //Updating data in ShopOnboardClass and then pushing it to ViewModel.
+                                                shopData.setUserName(ETName.getText().toString());
+                                                shopData.setPhoneNumber(ETPhoneNumber.getText().toString());
+                                                shopData.setEmail(ETEmail.getText().toString());
+                                                shopData.setShopName(ETBusinessName.getText().toString());
+                                                viewModel.addShopData(shopData);
 
-                            //Changing the fragment.
-                            viewModel.setPositionSignUp(2);
-                        }
-                        else{
-                            progressBar.setVisibility(View.VISIBLE);
-                            ContinueBtn.setVisibility(View.INVISIBLE);
+                                                //Changing the fragment.
+                                                viewModel.setPositionSignUp(2);
+                                            }
+                                            else{
+                                                progressBar.setVisibility(View.VISIBLE);
+                                                ContinueBtn.setVisibility(View.INVISIBLE);
 
-                            // Requesting for an otp to entered number
-                            PhoneAuthOptions options =
-                                    PhoneAuthOptions.newBuilder(mAuth)
-                                            .setPhoneNumber("+91 " + ETPhoneNumber.getText().toString())       // Phone number to verify
-                                            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                                            .setActivity(requireActivity())                 // Activity (for callback binding)
-                                            .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
-                                            .build();
-                            PhoneAuthProvider.verifyPhoneNumber(options);
-                        }
+                                                // Requesting for an otp to entered number
+                                                PhoneAuthOptions options =
+                                                        PhoneAuthOptions.newBuilder(mAuth)
+                                                                .setPhoneNumber("+91 " + ETPhoneNumber.getText().toString())       // Phone number to verify
+                                                                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                                                                .setActivity(requireActivity())                 // Activity (for callback binding)
+                                                                .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
+                                                                .build();
+                                                PhoneAuthProvider.verifyPhoneNumber(options);
+                                            }
+                                        }else{
+                                            Toast.makeText(getActivity(), "Number Already Registered", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                     }else{
                         //If Phone number is not entered in correct format setting text to null to show error background.
                         changeStateTextInputLayout(ETPhoneNumberLayout,"Red");

@@ -168,15 +168,16 @@ public class Fragment_Dashboard_NewProduct extends Fragment {
                     progressBar.setVisibility(View.VISIBLE);
                     BtnAddProduct.setVisibility(View.INVISIBLE);
 
-                    Map<String, String> values = new HashMap<>();
+                    Map<String, Object> values = new HashMap<>();
                     values.put("Category",ACTSelectCategory.getText().toString().trim());
                     values.put("Name",ETProductName.getText().toString().trim());
                     values.put("Description",ETProductDescription.getText().toString().trim());
                     values.put("Rating","0.0");
                     values.put("InStock", "true");
                     values.put("Brand",ETProductBrand.getText().toString().trim());
-                    values.put("MRP",ETProductMRP.getText().toString().trim());
-                    values.put("SellingPrice",ETProductSP.getText().toString().trim());
+                    values.put("MRP",Integer.parseInt(ETProductMRP.getText().toString().trim()));
+                    values.put("SellingPrice",Integer.parseInt(ETProductSP.getText().toString().trim()));
+                    values.put("ShopId",ShopId);
 
                     final StorageReference reference = storage.getReference()
                             .child(ShopPhoneNumber).child(ETProductName.getText().toString().trim());

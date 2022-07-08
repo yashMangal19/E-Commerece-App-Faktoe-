@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 
+import com.example.faktoeshop.OrderManagement.FragmentOrderManagement;
 import com.example.faktoeshop.R;
 import com.example.faktoeshop.signUpSignIn.ShopOnboardClass;
 import com.example.faktoeshop.signUpSignIn.ShopOnboardViewModel;
@@ -47,6 +48,9 @@ public class ShopDashboard extends AppCompatActivity {
                     loadFragment(new Fragment_Dashboard_Home());
                 }else if(i == R.id.add){
                     loadFragment(new Fragment_Dashboard_NewProduct());
+                }
+                else if(i == R.id.History){
+                    loadFragment(new FragmentOrderManagement());
                 }
             }
         });

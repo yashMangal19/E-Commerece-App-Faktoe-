@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable-v24/shop_onboard_signup_background.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/background_filters.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/background_gray_rounded.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/background_white_gray_border.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/bottom_nav_bar_background.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/bottom_sheet_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/checkbox_background.xml" value="0.1" />
@@ -25,21 +26,30 @@
         <entry key="app/src/main/res/drawable/edit_text_border.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/edit_text_border_grey.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/edit_text_error_border.xml" value="0.16690411376953126" />
+        <entry key="app/src/main/res/drawable/edit_text_search_white_blue_gray_border.xml" value="0.16034088134765626" />
         <entry key="app/src/main/res/drawable/error_bar.xml" value="0.1365" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/icon_notification_alert.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/my_compound_button_color_selector.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/product_review_yellow.xml" value="0.48418426513671875" />
         <entry key="app/src/main/res/drawable/rounded_button_blue.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/rounded_button_gray.xml" value="0.2035" />
+        <entry key="app/src/main/res/drawable/rounded_corners_right_blue.xml" value="0.2035" />
         <entry key="app/src/main/res/drawable/shop_onboard_toggle.xml" value="0.2085" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24261932373046877" />
         <entry key="app/src/main/res/layout/activity_shop_dashboard.xml" value="0.3287582397460939" />
         <entry key="app/src/main/res/layout/activity_sign_in_sign_up.xml" value="0.22605172862177303" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fargment_dashboard_home_product_edit_dialog.xml" value="0.3309232480533927" />
-        <entry key="app/src/main/res/layout/fragment_dashboard_home.xml" value="0.33664703369140625" />
+        <entry key="app/src/main/res/layout/fargment_dashboard_home_product_edit_dialog.xml" value="0.35356576514323645" />
+        <entry key="app/src/main/res/layout/fragment_dashboar_orders.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_home.xml" value="0.5601851851851852" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_home_dialog_filters.xml" value="0.31972808837890626" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_home_filter_category_checkbox.xml" value="0.5112277265908062" />
         <entry key="app/src/main/res/layout/fragment_dashboard_home_product_layout.xml" value="0.5659255981445314" />
         <entry key="app/src/main/res/layout/fragment_dashboard_new_product.xml" value="0.40781357093899934" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_orders.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_orders_details_layout.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/fragment_dashboard_orders_layout.xml" value="0.22959957729050462" />
         <entry key="app/src/main/res/layout/fragment_dashboard_product_management.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/fragment_dashboard_profile.xml" value="0.21105072463768115" />
         <entry key="app/src/main/res/layout/fragment_sign_in_1_mobile_number.xml" value="0.38181818181818183" />
@@ -54,6 +64,8 @@
         <entry key="app/src/main/res/layout/spinner_layout.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/menu/bottom_nav_bar_menu.xml" value="0.2953125" />
         <entry key="app/src/main/res/sign_in/drawable/ic_baseline_check_circle_24.xml" value="0.1365" />
+        <entry key="app/src/main/res/sign_in/drawable/icon_close.xml" value="0.2035" />
+        <entry key="app/src/main/res/sign_in/drawable/icon_exit.xml" value="0.1645" />
       </map>
     </option>
   </component>

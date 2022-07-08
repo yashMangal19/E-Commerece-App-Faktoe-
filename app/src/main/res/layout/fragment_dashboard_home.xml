@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <View
         android:layout_width="match_parent"
@@ -15,9 +16,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/OrderSummaryLayout"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="160dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="95dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/dashboard_summary_view"
         android:elevation="4dp"
@@ -164,49 +165,112 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/InStock_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button_blue"
-        android:fontFamily="@font/manjorant_regular"
-        android:paddingStart="4dp"
-        android:paddingEnd="4dp"
-        android:text="In Stock"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        android:elevation="0dp"
-        app:layout_constraintEnd_toStartOf="@id/OutOfStock_Btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/OrderSummaryLayout" />
-
-    <Button
-        android:id="@+id/OutOfStock_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Out of Stock"
-        android:background="@drawable/rounded_button_gray"
-        android:fontFamily="@font/manjorant_regular"
-        android:textColor="@color/white"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:textSize="12sp"
-        android:elevation="0dp"
+    <LinearLayout
+        android:id="@+id/FilterAndSearch_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
         app:layout_constraintTop_toBottomOf="@id/OrderSummaryLayout"
-        app:layout_constraintStart_toEndOf="@id/InStock_Btn"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ShowFilterBtn_CardView"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_filter"
+                android:padding="12dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditText_searchProduct"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_search_white_blue_gray_border"
+            android:paddingStart="16dp"
+            android:fontFamily="@font/manjorant_regular"
+            android:hint="Search"
+            android:textColor="@color/dark_gray"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textSize="17sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/SearchProductBtn_CardView"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            app:cardCornerRadius="30dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/blue">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                android:padding="12dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DividerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/FilterAndSearch_LinearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/RecyclerView_ProductList">
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/days_selected"/>
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/days_selected"/>
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/days_selected"/>
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/days_selected"/>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView_ProductList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/OutOfStock_Btn"
+        app:layout_constraintTop_toBottomOf="@id/DividerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="100dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

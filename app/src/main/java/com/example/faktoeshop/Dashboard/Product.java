@@ -1,13 +1,13 @@
 package com.example.faktoeshop.Dashboard;
 
 public class Product {
-    private String Name, Description, Category, MRP, SellingPrice, Brand, Rating, ImageUrl, Id;
+    private String Name, Description, Category, Brand, Rating, ImageUrl, Id, ShopId, InStock ;
+    private long MRP, SellingPrice;
 
     public Product(){
-
     }
 
-    public Product(String name, String description, String category, String MRP, String sellingPrice, String brand, String rating, String ImageUrl, String Id) {
+    public Product(String name, String description, String category, long MRP, long sellingPrice, String brand, String rating, String ImageUrl, String Id, String InStock) {
         this.Name = name;
         this.Description = description;
         this.Category = category;
@@ -17,6 +17,40 @@ public class Product {
         this.Rating = rating;
         this.ImageUrl = ImageUrl;
         this.Id = Id;
+        this.ShopId = ShopId;
+        this.InStock = InStock;
+    }
+
+    public String getInStock() {
+        return InStock;
+    }
+
+    public void setInStock(String inStock) {
+        InStock = inStock;
+    }
+
+    public long getMRP() {
+        return MRP;
+    }
+
+    public void setMRP(long MRP) {
+        this.MRP = MRP;
+    }
+
+    public long getSellingPrice() {
+        return SellingPrice;
+    }
+
+    public void setSellingPrice(long sellingPrice) {
+        SellingPrice = sellingPrice;
+    }
+
+    public String getShopId() {
+        return ShopId;
+    }
+
+    public void setShopId(String shopId) {
+        ShopId = shopId;
     }
 
     public String getId() {
@@ -57,22 +91,6 @@ public class Product {
 
     public void setCategory(String category) {
         Category = category;
-    }
-
-    public String getMRP() {
-        return MRP;
-    }
-
-    public void setMRP(String MRP) {
-        this.MRP = MRP;
-    }
-
-    public String getSellingPrice() {
-        return SellingPrice;
-    }
-
-    public void setSellingPrice(String sellingPrice) {
-        SellingPrice = sellingPrice;
     }
 
     public String getBrand() {

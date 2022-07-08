@@ -7,6 +7,7 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -183,6 +184,8 @@ public class Fragment_SignUp_5 extends Fragment {
                                 Toast.makeText(getActivity(), e.getMessage(),Toast.LENGTH_SHORT).show();
                             }
                         });
+
+                                ref.update("id",id);
 
 
                     }else{

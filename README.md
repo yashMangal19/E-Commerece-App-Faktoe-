@@ -1,7 +1,9 @@
-This is a shop verdion of an E-commerece app which allows shop owners to register their shop on the application.
-And add their products.
-Shops can then declare any product out of stock and that product will not be shown to user.
-Shop can also declare out of stock products in stock again or remove them from list if they want.
+This is a shop verdion of an E-commerece app which allows shop owners to register their shop on the application.</br></br>
+And add their products.</br></br>
+Shops can then declare any product out of stock and that product will not be shown to user.</br></br>
+Shop can also declare out of stock products in stock again or remove them from list if they want.</br></br>
+
+This app is not complete yet conforming orders and declaring products in stock is remianing.
 
 
 
